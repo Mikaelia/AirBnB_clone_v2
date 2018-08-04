@@ -1,7 +1,9 @@
 # Synopsis
 
-The Airbnb clone project for which we are creating a copy of the [Airbnb](https://www.airbnb.com/).
-Only some features will be implemented and will be listed below once completed.
+The Airbnb clone project emulates the functionality of [Airbnb](https://www.airbnb.com/).
+Only some features will be implemented and will be listed upon completion.
+
+* See [older version](https://github.com/Mikaelia/AirBnB_clone) of this project for personal development of console, and [web static](https://github.com/Mikaelia/AirBnB_clone/tree/master/web_static)
 
 
 ## Features
