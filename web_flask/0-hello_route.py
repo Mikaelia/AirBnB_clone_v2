@@ -6,6 +6,7 @@ Initializes flask app to listen on 0.0.0.0:5000
 
 app = Flask(__name__)
 
+
 @app.route('/')
 @app.route('/index')
 def index():
