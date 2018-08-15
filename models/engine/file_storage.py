@@ -17,7 +17,10 @@ class FileStorage:
         '''
             Return the dictionary
         '''
-        return self.__objects
+        if cls is None:
+            return self.__objects
+        return {key: value for (key, value) in self.__objects.items() if
+                key.find(cls.__name__) != -1}
 
     def new(self, obj):
         '''
