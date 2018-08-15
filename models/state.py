@@ -5,6 +5,7 @@
 from sqlalchemy import Column, Integer, String
 from models.base_model import BaseModel, Base
 from sqlalchemy.orm import relationship
+import os
 
 
 class State(BaseModel, Base):
@@ -16,6 +17,8 @@ class State(BaseModel, Base):
     cities = relationship("City", backref="state",
                           cascade="all, delete-orphan")
 
-    @property
-    def cities(self):
-        return [city for city in State.cities if city.state_id == self.id]
+    if os.getenv('HBNB_TYPE_STORAGE') != 'db':
+        @property
+        def cities(self):
+            return [city for city in State.cities if city.state_id == self.id]
+    

@@ -61,3 +61,8 @@ class FileStorage:
         FileStorage.__objects = {
             key: value for key,
             value in FileStorage.__objects.items() if value != obj}
+
+    def close(self):
+        '''
+        '''
+        reload()

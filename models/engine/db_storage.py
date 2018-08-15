@@ -38,12 +38,12 @@ class DBStorage:
         allobjs = {}
         if cls:
             allobjs = {obj.__class__.__name__ + "." + obj.id: obj for
-                       obj in self.__session.query(cls).all()}
+                       obj in self.__session.query(eval(cls)).all()}
         else:
             for tbl in Base.__subclasses__():
                 table = self.__session.query(tbl).all()
                 for obj in table:
-                    allobjs[obj.__class__.__name__ + "." + obj.id] = obj
+                    allobjs[obj.__class__.__name__] = obj
         return allobjs
 
     def new(self, obj):
@@ -74,3 +74,9 @@ class DBStorage:
                                        expire_on_commit=False)
         Session = scoped_session(session_factory)
         self.__session = Session()
+
+    def close(self):
+        '''
+        Closes session
+        '''
+        self.__session.remove()
