@@ -4,13 +4,13 @@ from models import storage
 
 app = Flask(__name__)
 
-
-@app.route('/states_list', strict_slashes=False)
-def state_list():
+@app.route('/cities_by_states', strict_slashes=False)
+def cities_by_state():
     states = storage.all('State')
     state_list = [v for v in states.values()]
-    return render_template('7-states_list.html', states=state_list)
-
+    cities = storage.all('City')
+    city_list = [v for v in cities.values()]
+    return render_template('8-cities_by_states.html', cities=city_list, states=state_list)
 
 @app.teardown_appcontext
 def teardown(value):
