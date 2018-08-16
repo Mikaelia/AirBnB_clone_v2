@@ -1,76 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="stylesheet" href="styles/4-common.css">
-    <link rel="stylesheet" href="styles/3-header.css">
-    <link rel="stylesheet" href="styles/3-footer.css">
-    <link rel="stylesheet" href="styles/6-filters.css">
-    <link rel="shortcut icon" href="images/icon.png" type="image/png">
-    <meta charset="utf-8">
-    <title>AirBnB Clone</title>
-  </head>
-  <body>
-    <header class="header">
-      <div class="header__logo"></div>
-    </header>
-    <div class="container">
-      <section class="filters">
-        <button class="filters__button">Search</button>
-        <div class="wrapper">
-          <div class="locations">
-            <h3 class="filters__title">States</h3>
-            <h4 class="filters__subtitle">&nbsp;</h4>
-            <UL>
-                {% for state in states|sort(attribute='name') %}
-                <lI><B>{{state.name}}</B>
-            <UL>
-                        {% for city in cities|sort(attribute='name') %}
+    <head>
+        <title>Holberton School</title>
+        <link rel="stylesheet" href="../static/styles/3-header.css">
+        <link rel="stylesheet" href="../static/styles/4-common.css">
+        <link rel="stylesheet" href="../static/styles/3-footer.css">
+        <link rel="stylesheet" href="../static/styles/6-filters.css">
+        <link rel="icon" href="../static/images/logo.png">
+    </head>
+
+    <body>
+        <header>
+            <div class="logo"></div>
+        </header>
+        <div class="container">
+            <section class="filters">
+                <button type="button">Search</button>
+                <div class="locations">
+                    <h3>States</h3>
+                    <h4>&nbsp;</h4>
+                    <ul class="popover">
+                    {% for state in states|sort(attribute='name') %}
+                        <li><h2>{{state.name}}</h2></li>
+                        <li>
+                            <ul class="popover_list">
+                            {% for city in cities|sort(attribute='name') %}
                             {%- if city.state_id == state.id %}
-                        <LI>{{city.name}}</LI>
+                                <li>{{city.name}}</li>
                             {%- endif -%}
-                        {% endfor %}
-                    </UL>
-                </lI>
-                {% endfor %}
-            </UL>
-          </div>
-          <div class="amenities">
-            <h3 class="filters__title">Amenities</h3>
-            <h4 class="filters__subtitle">&nbsp;</h4>
-            <UL>
-              {% for amenity in amenities|sort(attribute='name') %}
-              <LI>{{amenity.name}}</LI>
-              {% endfor %}
-            </UL>
-          </div>
-          <div id="left" class="popover">
-            <ul class="popover__list">
-              <li>Arizona:</li>
-                <ul class="popover__sublist">
-                  <li>Page</li>
-                  <li>Page2</li>
-                </ul>
-              <li>California:</li>
-                <ul class="popover__sublist">
-                  <li>San Francisco</li>
-                  <li>Los Angeles</li>
-                </ul>
-            </ul>
-          </div>
-           <div id="right" class="popover" >
-            <ul class="popover__sublist">
-              <li>Bathroom</li>
-              <li>Kitchen</li>
-              <li>Iron</li>
-            </ul>
-          </div>
+                            {% endfor %}
+                            </ul>
+                        </li>
+                    {% endfor %}
+                    </ul>
+                </div>
+                <div class="amenities">
+                    <h3>Amenities</h3>
+                    <h4>&nbsp;</h4>
+                    <ul class="popover">
+                    {% for amenity in amenities|sort(attribute='name') %}
+                        <li>{{amenity.name}}</li>
+                    {% endfor %}
+                    </ul>
+                </div>
+            </section>
         </div>
-      </section>   
-    </div>
-    <footer class="footer">
-      <p class="footer__text">
-        Holberton School
-      </p>
-    </footer>
-  </body>
+        <footer>
+            Holberton School
+        </footer>
+    </body>
 </html>
