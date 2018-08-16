@@ -17,6 +17,9 @@
 
     {% else %}
 
+        {% if not states %}
+        <H1>Not Found!</H1>
+        {% else %}
         <H1>States</H1>
         <UL>
             {% for state in states|sort(attribute='name') %}
@@ -24,6 +27,7 @@
             {% endfor %}
       
         </UL>
+        {% endif %}
     {% endif %}
     </BODY>
 </HTML>
