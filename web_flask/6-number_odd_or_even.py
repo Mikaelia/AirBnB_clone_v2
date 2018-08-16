@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 from flask import Flask, render_template
-
+"""
+View functions
+"""
 app = Flask(__name__)
 
 
@@ -40,5 +42,5 @@ def num_template(n):
 def odd_even(n):
     return render_template('6-number_odd_or_even.html', n=n)
 
-
-app.run(host='0.0.0.0')
+if __name__ == '__main__':
+    app.run(host='0.0.0.0')
