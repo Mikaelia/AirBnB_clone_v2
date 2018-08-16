@@ -7,9 +7,9 @@ Initializes flask app to listen on 0.0.0.0:5000
 app = Flask(__name__)
 
 
-@app.route('/')
-def index():
-    return "Hello HBNB"
+@app.route('/', strict_slashes=False)
+def hello():
+    return "Hello HBNB!"
 
 
 if __name__ == "__main__":
