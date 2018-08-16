@@ -8,7 +8,7 @@ from models import storage
 app = Flask(__name__)
 
 
-@app.route('/states', strict_slashes=False)
+@app.route('/states_list', strict_slashes=False)
 def states():
     states = storage.all('State')
     state_list = [v for v in states.values()]
