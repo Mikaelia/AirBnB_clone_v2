@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+View functions
+"""
 from flask import Flask
 
 app = Flask(__name__)
@@ -20,4 +23,5 @@ def c(text):
     return "C {}".format(text.replace('_', ' '))
 
 
-app.run(host='0.0.0.0')
+if __name__ == '__main__':
+    app.run(host='0.0.0.0')

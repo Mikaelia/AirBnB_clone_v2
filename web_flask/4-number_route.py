@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+View Functions
+"""
 from flask import Flask
 
 app = Flask(__name__)
@@ -31,4 +34,5 @@ def route(n):
     return "{} is a number".format(n)
 
 
-app.run(host='0.0.0.0')
+if __name__ == '__main__':
+    app.run(host='0.0.0.0')
