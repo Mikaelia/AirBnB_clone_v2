@@ -7,7 +7,11 @@ In this stage of the AirBnb clone, we implement a mySQL database, along with the
 The Airbnb clone project emulates the functionality of [Airbnb](https://www.airbnb.com/).
 Features will be implemented as project versions progress, and will be listed upon completion.
 
-* See [older version](https://github.com/Mikaelia/AirBnB_clone) of this project for personal development of console, and [web static](https://github.com/Mikaelia/AirBnB_clone/tree/master/web_static)
+## Links to Project Versions:
+- Version 1 - Testing Console: https://github.com/Mikaelia/AirBnB_clone
+- Version 2 - MySQL: https://github.com/Mikaelia/AirBnB_clone_v2/edit/master/README.md
+- Version 3 - Deploy Static & RESTful API: https://github.com/Mikaelia/AirBnB_clone_v3/edit/master/README.md
+- Version 4 - Web Framework/Web dynamic: https://github.com/Mikaelia/AirBnB_clone_v4/edit/master/README.md
 
 ### Command Interpreter
 
