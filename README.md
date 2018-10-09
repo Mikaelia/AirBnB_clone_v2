@@ -1,12 +1,13 @@
-# Synopsis
+# 0x02. AirBnB clone - MySQL
+In this stage of the AirBnb clone, we implement a mySQL database, along with the functionality to switch between either database or JSON file storage. SQLalchemy is used for interacting with the database. Fabric is used for application deployment. In addition, the testing console has been updated to allow for object creation with key/value pairs
+
+
+## Synopsis
 
 The Airbnb clone project emulates the functionality of [Airbnb](https://www.airbnb.com/).
-Only some features will be implemented and will be listed upon completion.
+Features will be implemented as project versions progress, and will be listed upon completion.
 
 * See [older version](https://github.com/Mikaelia/AirBnB_clone) of this project for personal development of console, and [web static](https://github.com/Mikaelia/AirBnB_clone/tree/master/web_static)
-
-
-## Features
 
 ### Command Interpreter
 
